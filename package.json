@@ -1,0 +1,45 @@
+{
+  "name": "koa-skeleton",
+  "version": "1.0.0",
+  "description": "A complete starter pack using koa.js with directory structure, db connection and secure session management.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amrendraw3/koa-skeleton.git"
+  },
+  "keywords": [
+    "koajs",
+    "koa",
+    "koa",
+    "starter",
+    "express",
+    "web",
+    "framework",
+    "node"
+  ],
+  "author": "Amrendra Pratap Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amrendraw3/koa-skeleton/issues"
+  },
+  "homepage": "https://github.com/amrendraw3/koa-skeleton#readme",
+  "dependencies": {
+    "config": "1.26.2",
+    "cors": "2.8.4",
+    "ect": "0.5.9",
+    "kcors": "2.2.1",
+    "koa": "2.3.0",
+    "koa-bodyparser": "4.2.0",
+    "koa-passport": "3.0.0",
+    "koa-route": "3.2.0",
+    "koa-router": "7.2.1",
+    "koa-static": "4.0.1",
+    "koa-views": "6.0.2",
+    "mongoose": "4.11.7",
+    "mongoose-unique-validator": "1.0.5",
+    "waterline": "0.11.11"
+  }
+}
