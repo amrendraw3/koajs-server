@@ -15,11 +15,16 @@ var app = new koa();
 app.use(cors());
 app.use(bodyParser());
 
-// app.use(passport.initialize());
+app.use(passport.initialize());
 // app.use(passport.session());
 
 // initialize render helper
 app.use(views('/Users/amrendra/work/tayh-app/dist', config.template.options));
+
+// app.use(function(ctx, next){
+// 	console.log('A route has been hit: ', ctx.request);
+// 	next();
+// })
 
 require('./routes')(app);
 

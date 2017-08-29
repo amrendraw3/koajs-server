@@ -1,4 +1,4 @@
-var WebsiteSchema = require('../models/website').Website;
+var WebsiteSchema = require('../models/websites').Website;
 var validatInput = require('../shared/validateInput');
 
 module.exports = {

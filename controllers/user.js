@@ -1,4 +1,6 @@
+var passport = require('koa-passport');
 var UserSchema = require('../models/users').User;
+var BookingSchema = require('../models/bookings').Booking;
 var validatInput = require('../shared/validateInput');
 
 module.exports = {
@@ -36,5 +38,13 @@ module.exports = {
 
 	count: async function(ctx, next){
 		ctx.body = await UserSchema.count({});
+	},
+
+	authenticate: async function (ctx, next){
+		ctx.body = await UserSchema.where({username: ctx.request.body.username, password: ctx.request.body.password})
+	},
+
+	bookings: async function(ctx, body) {
+		ctx.body = await BookingSchema.find({userId: ctx.request.body.userId});
 	}
 };
