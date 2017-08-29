@@ -59,6 +59,11 @@ module.exports = function(app) {
 	app
   .use(router.routes())
   .use(router.allowedMethods())
+  .use(function(ctx, next){ // Handle request that matches no routes defined
+  	console.log('A non-matching route has been hit!');
+  	ctx.body = {succes: false, code: 404, info: 'A non-matching route has been hit!'};
+  	next();
+  })
   .use(function(ctx, body){ // Do anything after processing route
   	console.log('Route has been processed, response: ', ctx.response.body);
   });

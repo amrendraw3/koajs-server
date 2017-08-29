@@ -6,12 +6,16 @@ var koa = require('koa'),
     serve = require('koa-static'),
     convert = require('koa-convert'),
     passport = require('koa-passport'),
-    bodyParser = require('koa-bodyparser');
+    bodyParser = require('koa-bodyparser'),
+    KoaEx = require('koa-exception');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/' + config.database.name);
 
 var app = new koa();
+
+app.use(KoaEx());
+
 app.use(cors());
 app.use(bodyParser());
 
