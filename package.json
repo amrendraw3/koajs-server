@@ -40,7 +40,7 @@
     "koa-router": "7.2.1",
     "koa-static": "4.0.1",
     "koa-views": "6.0.2",
-    "mongoose": "4.11.7",
+    "mongoose": "4.13.20",
     "mongoose-unique-validator": "1.0.5",
     "npm": "^5.10.0",
     "waterline": "0.11.11"
